@@ -1,7 +1,7 @@
 package scr.calculadora;
 
 public class main {
-    public static void main(String[] args) {
+    public static void calculate() {
         sistemCalculate sistema = new sistemCalculate();
         sistema.iniciar();
     }
