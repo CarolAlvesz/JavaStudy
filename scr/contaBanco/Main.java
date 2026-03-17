@@ -19,6 +19,9 @@ public class Main {
 
         if (conta.autenticar(nome, cpf, numConta)) {
             System.out.println("Autenticação bem-sucedida!");
+
+            Sistema sistema = new Sistema();
+            sistema.menu(conta, scanner);
         } else {
             System.out.println("Autenticação falhou. Verifique suas credenciais.");
         }
