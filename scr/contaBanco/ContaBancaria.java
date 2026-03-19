@@ -44,8 +44,8 @@ public class ContaBancaria {
 
     public void saque(double valor) {
         this.saldo -=valor;
-        if (valor < saldo) {
-            System.out.println("Saldo insuficiente");
+        if (valor > this.saldo) {
+            System.out.println("Saldo insuficiente para realizar o saque.");
         }
     }
 

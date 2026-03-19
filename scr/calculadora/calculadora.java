@@ -1,4 +1,4 @@
-package scr.calculadora;
+package calculadora;
 
 public class calculadora {
         public double somar(double a, double b) {

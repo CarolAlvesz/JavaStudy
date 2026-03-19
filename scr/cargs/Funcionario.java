@@ -1,4 +1,4 @@
-package scr.cargs;
+package cargs;
 
 public class Funcionario {
     public String nome; 

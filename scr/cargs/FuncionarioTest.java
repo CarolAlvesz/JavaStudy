@@ -1,4 +1,4 @@
-package scr.cargs;
+package cargs;
 
 public class FuncionarioTest {
     public static void main (String[] args) {

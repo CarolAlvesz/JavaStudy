@@ -1,4 +1,4 @@
-package scr.calculadora;
+package calculadora;
 
 public class main {
     public static void calculate() {
