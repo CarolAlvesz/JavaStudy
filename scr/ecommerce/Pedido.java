@@ -45,7 +45,7 @@ public class Pedido {
     
     //print
     public String exibirFolha() {
-        return "Pedido #" + id + "\nStatus: " + status;
+        return "Pedido #" + id + "\nStatus: " + this.status;
 
 
     }
