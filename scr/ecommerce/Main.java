@@ -1,11 +1,14 @@
 package ecommerce;
 
+import ecommerce.tipoPedido.PedidoExpresso;
+import ecommerce.tipoPedido.PedidoNormal;
+
 public class Main {
     public static void main(String[] args) {
         
     // criando pedidos
-    Pedido p1 = new Pedido(01, "Ana", 120.0);
-    Pedido p2 = new Pedido(02, "Jorge", 40.0);
+    Pedido p1 = new PedidoExpresso(01, "Ana", 120.0);
+    Pedido p2 = new PedidoNormal(02, "Jorge", 40.0);
     
     //print 
 
@@ -13,6 +16,7 @@ public class Main {
     p1.atualStatus(StatusPedido.ENVIADO);
     p1.atualStatus(StatusPedido.ENTREGUE);
 
+    System.out.println();
  
     System.out.println(p2.exibirFolha());
     p2.atualStatus(StatusPedido.PROCESSANDO); 

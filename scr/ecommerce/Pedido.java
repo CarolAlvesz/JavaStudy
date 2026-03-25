@@ -1,17 +1,23 @@
 package ecommerce;
 
-public class Pedido {
+public abstract class Pedido {
     private int id;
     private String cliente;
-    private double valorTotal;
+    private double valorProduto;
     private StatusPedido status;
 
-    public Pedido(int id, String cliente, double valorTotal) {
+    public Pedido(int id, String cliente, double valorProduto) {
         this.id = id;
         this.cliente = cliente;
-        this.valorTotal = valorTotal;
+        this.valorProduto = valorProduto;
         this.status = StatusPedido.PENDENTE;
         //o status sempre vai omeçar como pendente
+    }
+
+    public abstract double valorFrete();
+
+    public double getValorTotal() {
+        return valorProduto + valorFrete();
     }
 
     //criação dos getters
@@ -23,8 +29,8 @@ public class Pedido {
         return cliente;
     }
 
-    public double getValorTotal() {
-        return valorTotal;
+    public double getValorProduto() {
+        return valorProduto;
     }
 
     public StatusPedido getStatus() {
@@ -32,8 +38,8 @@ public class Pedido {
     }
 
     // setters - permitido a alteração
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setValorProduto(double valorProduto) {
+        this.valorProduto = valorProduto;
     }
 
     //método para atualizar o status
@@ -45,7 +51,7 @@ public class Pedido {
     
     //print
     public String exibirFolha() {
-        return "Pedido #" + id + "\nStatus: " + this.status;
+        return "Pedido #" + id + "\nStatus: " + this.status + "\n Valor Total: " + getValorTotal();
 
 
     }
