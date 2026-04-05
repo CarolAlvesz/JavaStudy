@@ -44,16 +44,10 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
-    public boolean depositar(double valor) {
-        if (valor <= saldo) {
-           saldo -= valor;
-            System.out.println("Depósito realizado com sucesso!");
-            return true;
-        } else {
-            System.out.println("Valor de depósito inválido. O valor deve ser positivo.");
-            return false;
+    public double depositar(double valor) {
+            saldo += valor;
+            return saldo;
         }
-    }
 
     public boolean saque(double valor) {
         if (valor > saldo) {
